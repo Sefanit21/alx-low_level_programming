@@ -1,30 +1,29 @@
-#include<stdio.h>
+#include <stdio.h>
 
 /**
- * print_sign - Determines if the input number
- * greater, equal or less than zero.
- *
- * @n: The input number as an integer.
- *
- * Return: 1 for positive num, -1 for negative num or zero for anything else
+ * main - prints the first 52 fibonacci numbers
+ * Return: nothing!
  */
 
-int print_sign(int n)
+int main(void)
 {
+        int i = 0;
+        long j = 1, k = 2;
 
-	if (n > 0)
-	{
-		putchar(43);
-		return (1);
-	}
-	else if (n < 0)
-	{
-		putchar(45);
-		return (-1);
-	}
-	else
-	{
-		putchar(48);
-		return (0);
-	}
+        while (i < 50)
+        {
+        if (i == 0)
+        printf("%ld", j);
+        else if (i == 1)
+        printf(", %ld", k);
+        else
+        {
+        k += j;
+        j = k - j;
+        printf(", %ld", k);
+        }
+        ++i;
+        }
+        printf("\n");
+        return (0);
 }
