@@ -6,11 +6,12 @@
  *
  * @n: The input number as an integer.
  *
- * Return: 1 is greater than zero. 0 is zero.
- * -1 is less than zero.
+ * Return: 1 for positive num, -1 for negative num or zero for anything else
  */
+
 int print_sign(int n)
 {
+
 	if (n > 0)
 	{
 		putchar(43);
@@ -26,5 +27,4 @@ int print_sign(int n)
 		putchar(48);
 		return (0);
 	}
-	putchar('\n');
 }
